@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Byte Reverse</title>
+
+    <script>
+
+        function  reverse() {
+            debugger
+            var hash = document.getElementById("reverseinput").value;
+            var revHash = "";
+
+            if (hash.length % 2 == 0) {
+                for (var i = hash.length - 1; i >= 0; i-=2) {
+                    revHash += hash[i-1] + hash[i];
+                }
+            }
+
+            document.getElementById("reverseoutput").innerText = revHash
+
+            //console.log(revHash); // will print "ccaaff”
+        }
+
+
+
+    </script>
+</head>
+<body>
+
+    <h1>Simple byte reverser</h1>
+    <input id="reverseinput" type="text"> <button onclick="reverse()" type="button">reverse</button>
+
+    <p id="reverseoutput"></p>
+</body>
+</html>
